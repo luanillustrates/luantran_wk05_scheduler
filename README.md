@@ -10,6 +10,8 @@ Save any events or to-dos in this handy scheduler.
 
 ![website's appearance and functionality preview](./assets/screenshot.jpg)
 
+Deployed link: https://luanillustrates.github.io/luantran_wk05_scheduler/
+
 ## Credits
 
 source Github repo, https://github.com/coding-boot-camp/crispy-octo-meme
