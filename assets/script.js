@@ -1,7 +1,9 @@
+// setting the current date
 $("#currentDay").text(dayjs().format('YYYY MM DD, ddd'));
 
 setTimeframe();
 
+// colour coding
 function setTimeframe() {
   var hour = dayjs().hour();
 
@@ -18,22 +20,23 @@ function setTimeframe() {
     })
 }
 
-function fetchSchedule() {
-  var savedSchedule = localStorage.getItem("schedule");
-  if (savedSchedule) {
-    schedule = JSON.parse(savedSchedule);
-  }
-}
 
-viewSchedule();
+// click event to log data
+$(".saveBtn").on("click", function () {
+  var loggedData = $(this).siblings(".description").val();
+  var timeStamp = $(this).parent().attr("id");
 
-function viewSchedule() {
-  fetchSchedule();
-  for (let i = 0; i <schedule.length, i++) {
-    var scheduleContent = schedule[i];
-    if (scheduleContent) {
-      var x = scheduleContent.entry;
-      textArea.val(x)
-    }
+  localStorage.setItem(timeStamp, loggedData);
+});
+
+scheduleLogging();
+
+function scheduleLogging() {
+  var divElement = $(".time-block");
+  
+  for (let x = 0; x < divElement.length; x++) {
+      var descElement = divElement[x].children[1];
+      xString = divElement[x].id.toString();
+      $(descElement).val(localStorage.getItem(xString));
   }
 }
