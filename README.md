@@ -8,7 +8,7 @@ A scheduler of the work day to log in any events, whilst being able to show the 
 
 Save any events or to-dos in this handy scheduler.
 
-![website's appearance and functionality preview](../screenshot.jpg)
+![website's appearance and functionality preview](./screenshot.jpg)
 
 ## Credits
 
